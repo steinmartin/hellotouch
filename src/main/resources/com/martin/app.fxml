@@ -1,0 +1,9 @@
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<Pane fx:controller="com.martin.Controller" xmlns:fx="http://javafx.com/fxml"
+      onSwipeDown="#handleSwipeDown"
+      onSwipeUp="#handleSwipeUp"
+      onSwipeLeft="#handleSwipeLeft"
+      onSwipeRight="#handleSwipeRight">
+    <Button onAction="#btnClick" text="Click me" />
+</Pane>
