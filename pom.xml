@@ -38,9 +38,9 @@
                 <configuration>
                     <mainClass>com.martin.App</mainClass>
                     <options>
-                        <option>-Djdk.gtk.version=2</option>
+<!--                        <option>-Djdk.gtk.version=2</option>
                         <option>-Dcom.sun.javafx.isEmbedded=true</option>
-                        <option>-Dcom.sun.javafx.touch=true</option>
+                        <option>-Dcom.sun.javafx.touch=true</option>-->
                     </options>
                 </configuration>
             </plugin>
