@@ -25,19 +25,26 @@
     </dependencies>
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.openjfx</groupId>-->
+<!--                <artifactId>javafx-maven-plugin</artifactId>-->
+<!--                <version>${javafx.maven.plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <mainClass>com.martin.App</mainClass>-->
+<!--                    <options>-->
+<!--                        <option>-Djdk.gtk.version=3</option>-->
+<!--                        <option>-Dcom.sun.javafx.isEmbedded=true</option>-->
+<!--                        <option>-Dcom.sun.javafx.touch=true</option>-->
+<!--                    </options>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
             <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>${javafx.maven.plugin.version}</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
                 <configuration>
                     <mainClass>com.martin.App</mainClass>
-                    <options>
-<!--
-                        <option>-Djdk.gtk.version=3</option>
-                        <option>-Dcom.sun.javafx.isEmbedded=true</option>
-                        <option>-Dcom.sun.javafx.touch=true</option>
--->
-                    </options>
                 </configuration>
             </plugin>
         </plugins>
