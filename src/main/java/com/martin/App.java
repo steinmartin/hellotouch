@@ -11,6 +11,7 @@
         import javafx.scene.Parent;
         import javafx.scene.Scene;
         import javafx.scene.control.ComboBox;
+        import javafx.scene.control.Label;
         import javafx.scene.effect.DropShadow;
         import javafx.scene.effect.Lighting;
         import javafx.scene.image.Image;
@@ -43,14 +44,14 @@
             @Override
             public void start(Stage stage) {
 
-        //        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
+                var label = new Label("Hello, JavaFX " + SystemInfo.javafxVersion() + ", running on Java " + SystemInfo.javaVersion() + ".");
         //        var scene = new Scene(new StackPane(label), 640, 480);
         //        stage.setScene(scene);
         //        stage.show();
 
                 stage.addEventFilter(TouchEvent.ANY, event -> System.out.println("TouchPoint: " + event.getTouchPoint()));
-                //stage.addEventFilter(MouseEvent.ANY, event -> System.out.println("Mouse Event: " + event.getEventType()));
-                //stage.addEventFilter(SwipeEvent.ANY, event -> System.out.println("Swipe Event: " + event.getEventType()));
+                stage.addEventFilter(MouseEvent.ANY, event -> System.out.println("Mouse Event: " + event.getEventType()));
+                stage.addEventFilter(SwipeEvent.ANY, event -> System.out.println("Swipe Event: " + event.getEventType()));
                 final ComboBox<String> comboBox = new ComboBox<>();
                 comboBox.getItems().addAll("Test1", "Test2", "Test3");
 
